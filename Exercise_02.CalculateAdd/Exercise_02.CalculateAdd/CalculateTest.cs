@@ -20,13 +20,25 @@ namespace Exercise_02.CalculateAdd
         public void Test3()
         {
             Calculate calc = new Calculate();
-            Assert.AreEqual(5, calc.CalculateAddFive(0));
+            Assert.AreEqual(0, calc.CalculateAddFour(-4));
         }
         [Test]
         public void Test4()
         {
             Calculate calc = new Calculate();
+            Assert.AreEqual(5, calc.CalculateAddFive(0));
+        }
+        [Test]
+        public void Test5()
+        {
+            Calculate calc = new Calculate();
             Assert.AreEqual(8, calc.CalculateAddFive(3));
+        }
+        [Test]
+        public void Test6()
+        {
+            Calculate calc = new Calculate();
+            Assert.AreEqual(0, calc.CalculateAddFive(-5));
         }
     }
 }
