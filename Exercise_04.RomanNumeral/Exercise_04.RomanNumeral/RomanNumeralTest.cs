@@ -1,0 +1,116 @@
+using NUnit.Framework;
+
+namespace Exercise_04.RomanNumeral
+{
+    [TestFixture]
+    public class Tests
+    {
+        RomanNumeral rn;
+        [SetUp]
+        public void Setup()
+        {
+            rn = new RomanNumeral();
+        }
+
+        [Test]
+        public void Test1_Zero()
+        {
+            Assert.AreEqual("", rn.ArabicToRoman(0));
+        }
+        [Test]
+        public void Test2_One()
+        {
+            Assert.AreEqual("I", rn.ArabicToRoman(1));
+        }
+        [Test]
+        public void Test3_Three()
+        {
+            Assert.AreEqual("III", rn.ArabicToRoman(3));
+        }
+        [Test]
+        public void Test4_Four()
+        {
+            Assert.AreEqual("IV", rn.ArabicToRoman(4));
+        }
+        [Test]
+        public void Test5_Five()
+        {
+            Assert.AreEqual("V", rn.ArabicToRoman(5));
+        }
+        [Test]
+        public void Test6_Six()
+        {
+            Assert.AreEqual("VI", rn.ArabicToRoman(6));
+        }
+        [Test]
+        public void Test7_Nine()
+        {
+            Assert.AreEqual("IX", rn.ArabicToRoman(9));
+        }
+        [Test]
+        public void Test8_Ten()
+        {
+            Assert.AreEqual("X", rn.ArabicToRoman(10));
+        }
+        [Test]
+        public void Test9_Twenty()
+        {
+            Assert.AreEqual("XXIV", rn.ArabicToRoman(24));
+        }
+        [Test]
+        public void Test10_TheertyEigth()
+        {
+            Assert.AreEqual("XXXVIII", rn.ArabicToRoman(38));
+        }
+        [Test]
+        public void Test11_FourtyTwo()
+        {
+            Assert.AreEqual("XLII", rn.ArabicToRoman(42));
+        }
+        [Test]
+        public void Test12_FiftyOne()
+        {
+            Assert.AreEqual("LI", rn.ArabicToRoman(51));
+        }
+        [Test]
+        public void Test13_NinetyFive()
+        {
+            Assert.AreEqual("XCV", rn.ArabicToRoman(95));
+        }
+        [Test]
+        public void Test14_104()
+        {
+            Assert.AreEqual("CIV", rn.ArabicToRoman(104));
+        }
+        [Test]
+        public void Test15_419()
+        {
+            Assert.AreEqual("CDXIX", rn.ArabicToRoman(419));
+        }
+        [Test]
+        public void Test16_555()
+        {
+            Assert.AreEqual("DLV", rn.ArabicToRoman(555));
+        }
+        [Test]
+        public void Test17_986()
+        {
+            Assert.AreEqual("CMLXXXVI", rn.ArabicToRoman(986));
+        }
+        [Test]
+        public void Test18_1499()
+        {
+            Assert.AreEqual("MCDXCIX", rn.ArabicToRoman(1499));
+        }
+        [Test]
+        public void Test19_2219()
+        {
+            Assert.AreEqual("MMCCXIX", rn.ArabicToRoman(2219));
+        }
+        [Test]
+        public void Test20_Fail()
+        {
+            Assert.AreNotEqual("MMXVIII", rn.ArabicToRoman(2017));
+        }
+    }
+}
