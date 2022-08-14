@@ -6,10 +6,13 @@ namespace Exercise_04.RomanNumeral
     public class Tests
     {
         RomanNumeral rn;
+        RomanNumeral an;
+
         [SetUp]
         public void Setup()
         {
             rn = new RomanNumeral();
+            an = new RomanNumeral();
         }
 
         [Test]
@@ -111,6 +114,41 @@ namespace Exercise_04.RomanNumeral
         public void Test20_Fail()
         {
             Assert.AreNotEqual("MMXVIII", rn.ArabicToRoman(2017));
+        }
+        [Test]
+        public void Test27_Empty()
+        {
+            Assert.AreEqual(0, an.RomanToArabic(""));
+        }
+        [Test]
+        public void Test23_One()
+        {
+            Assert.AreEqual(1, an.RomanToArabic("I"));
+        }
+        [Test]
+        public void Test24_9()
+        {
+            Assert.AreEqual(9, an.RomanToArabic("IX"));
+        }
+        [Test]
+        public void Test26_94()
+        {
+            Assert.AreEqual(94, an.RomanToArabic("XCIV"));
+        }
+        [Test]
+        public void Test25_943()
+        {
+            Assert.AreEqual(943, an.RomanToArabic("CMXLIII"));
+        }
+        [Test]
+        public void Test21_1499()
+        {
+            Assert.AreEqual(1499, an.RomanToArabic("MCDXCIX"));
+        }
+        [Test]
+        public void Test22_3806()
+        {
+            Assert.AreEqual(3806, an.RomanToArabic("MMMDCCCVI"));
         }
     }
 }
