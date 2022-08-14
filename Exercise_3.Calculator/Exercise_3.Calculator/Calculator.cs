@@ -9,7 +9,6 @@ namespace Exercise_3.Calculator
         bool isEqual = false;
         public string GetDisplay()
         {
-
             return display;
         }
         public void Press (string input)
