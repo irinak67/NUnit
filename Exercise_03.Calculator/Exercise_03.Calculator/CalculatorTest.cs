@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Exercise_3.Calculator
+namespace Exercise_03.Calculator
 {
     [TestFixture]
     public class Tests

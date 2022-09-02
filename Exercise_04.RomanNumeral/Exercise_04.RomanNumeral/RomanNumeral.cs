@@ -18,7 +18,10 @@ namespace Exercise_04.RomanNumeral
             { 5, "V" },
             { 4, "IV" },
             { 1, "I" },
+<<<<<<< HEAD
 
+=======
+>>>>>>> c80243dc63730473d0560cc27729efc5a42dd724
         };
         Dictionary<string, int> romanToArabic = new Dictionary<string, int>
         {
